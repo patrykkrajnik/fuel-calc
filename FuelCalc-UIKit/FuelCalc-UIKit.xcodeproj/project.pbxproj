@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		E562049D26418071002A81A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562049C26418071002A81A3 /* AppDelegate.swift */; };
 		E562049F26418071002A81A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562049E26418071002A81A3 /* SceneDelegate.swift */; };
-		E56204A126418071002A81A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204A026418071002A81A3 /* ViewController.swift */; };
-		E56204A426418071002A81A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56204A226418071002A81A3 /* Main.storyboard */; };
+		E56204A126418071002A81A3 /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204A026418071002A81A3 /* InsertViewController.swift */; };
 		E56204A626418072002A81A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56204A526418072002A81A3 /* Assets.xcassets */; };
 		E56204A926418072002A81A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56204A726418072002A81A3 /* LaunchScreen.storyboard */; };
 		E56204B426418072002A81A3 /* FuelCalc_UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204B326418072002A81A3 /* FuelCalc_UIKitTests.swift */; };
 		E56204BF26418073002A81A3 /* FuelCalc_UIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204BE26418073002A81A3 /* FuelCalc_UIKitUITests.swift */; };
+		E56204E52641C1F8002A81A3 /* InsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204E42641C1F8002A81A3 /* InsertView.swift */; };
+		E56204EA2641C21E002A81A3 /* CalcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204E92641C21E002A81A3 /* CalcModel.swift */; };
+		E56204EF2641C22A002A81A3 /* CalcManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204EE2641C22A002A81A3 /* CalcManager.swift */; };
+		E56204F42641C340002A81A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56204F32641C340002A81A3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +41,7 @@
 		E562049926418071002A81A3 /* FuelCalc-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FuelCalc-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E562049C26418071002A81A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E562049E26418071002A81A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E56204A026418071002A81A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E56204A326418071002A81A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E56204A026418071002A81A3 /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		E56204A526418072002A81A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E56204A826418072002A81A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E56204AA26418072002A81A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		E56204BA26418073002A81A3 /* FuelCalc-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FuelCalc-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56204BE26418073002A81A3 /* FuelCalc_UIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCalc_UIKitUITests.swift; sourceTree = "<group>"; };
 		E56204C026418073002A81A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56204E42641C1F8002A81A3 /* InsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertView.swift; sourceTree = "<group>"; };
+		E56204E92641C21E002A81A3 /* CalcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcModel.swift; sourceTree = "<group>"; };
+		E56204EE2641C22A002A81A3 /* CalcManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcManager.swift; sourceTree = "<group>"; };
+		E56204F32641C340002A81A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,10 @@
 			children = (
 				E562049C26418071002A81A3 /* AppDelegate.swift */,
 				E562049E26418071002A81A3 /* SceneDelegate.swift */,
-				E56204A026418071002A81A3 /* ViewController.swift */,
-				E56204A226418071002A81A3 /* Main.storyboard */,
+				E56204F32641C340002A81A3 /* Constants.swift */,
+				E56204E12641C1AC002A81A3 /* Model */,
+				E56204E22641C1B7002A81A3 /* View */,
+				E56204E32641C1BD002A81A3 /* Controller */,
 				E56204A526418072002A81A3 /* Assets.xcassets */,
 				E56204A726418072002A81A3 /* LaunchScreen.storyboard */,
 				E56204AA26418072002A81A3 /* Info.plist */,
@@ -126,6 +134,31 @@
 				E56204C026418073002A81A3 /* Info.plist */,
 			);
 			path = "FuelCalc-UIKitUITests";
+			sourceTree = "<group>";
+		};
+		E56204E12641C1AC002A81A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E56204E92641C21E002A81A3 /* CalcModel.swift */,
+				E56204EE2641C22A002A81A3 /* CalcManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E56204E22641C1B7002A81A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E56204E42641C1F8002A81A3 /* InsertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E56204E32641C1BD002A81A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E56204A026418071002A81A3 /* InsertViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +266,6 @@
 			files = (
 				E56204A926418072002A81A3 /* LaunchScreen.storyboard in Resources */,
 				E56204A626418072002A81A3 /* Assets.xcassets in Resources */,
-				E56204A426418071002A81A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56204A126418071002A81A3 /* ViewController.swift in Sources */,
+				E56204A126418071002A81A3 /* InsertViewController.swift in Sources */,
 				E562049D26418071002A81A3 /* AppDelegate.swift in Sources */,
+				E56204EF2641C22A002A81A3 /* CalcManager.swift in Sources */,
 				E562049F26418071002A81A3 /* SceneDelegate.swift in Sources */,
+				E56204F42641C340002A81A3 /* Constants.swift in Sources */,
+				E56204E52641C1F8002A81A3 /* InsertView.swift in Sources */,
+				E56204EA2641C21E002A81A3 /* CalcModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E56204A226418071002A81A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E56204A326418071002A81A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E56204A726418072002A81A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SWVBX4853;
 				INFOPLIST_FILE = "FuelCalc-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patryk.FuelCalc-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SWVBX4853;
 				INFOPLIST_FILE = "FuelCalc-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.patryk.FuelCalc-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
