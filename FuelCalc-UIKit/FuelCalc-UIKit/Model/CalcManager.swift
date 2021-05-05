@@ -7,10 +7,13 @@
 
 import Foundation
 
-protocol CalcManagerProtocol {
-    
+protocol CalcManagerDelegate {
+    func didCalculateSuccessfully()
+    func didFailCalculating()
 }
 
 struct CalcManager {
+    
+    var delegate: CalcManagerDelegate?
     
 }
