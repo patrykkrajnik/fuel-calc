@@ -8,5 +8,16 @@
 import Foundation
 
 struct K {
+    static let appName = "FuelCalc"
+    static let calculateButton = "Calculate"
     
+    struct InsertViewTitles {
+        static let distance = "Distance (km)"
+        static let averageConsumption = "Average Consumption (l/100km)"
+        static let fuelPrice = "Price of 1 liter of fuel"
+    }
+    
+    struct InsertViewPlaceholders {
+        static let distance = "eg. 250"
+    }
 }
