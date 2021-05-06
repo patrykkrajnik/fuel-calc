@@ -58,11 +58,22 @@ class InsertViewController: UIViewController {
 // MARK: - CalcManagerDelegate
 
 extension InsertViewController: CalcManagerDelegate {
-    func didCalculateSuccessfully() {
-        print("Show result")
+    func didCalculateSuccessfully(_ calculatorManager: CalcManager) {
+        let resultViewController = ResultViewController()
+        
+        resultViewController.distance = calculatorManager.getDistance()
+        resultViewController.averageFuelConsumption = calculatorManager.getFuelConsumption()
+        resultViewController.fuelPrice = calculatorManager.getFuelPrice()
+        resultViewController.result = calculatorManager.getResult()
+        
+        self.present(resultViewController, animated: true, completion: nil)
     }
     
     func didFailCalculating() {
-        print("Insert distance")
+        insertView.distanceSectionView.backgroundColor = .systemRed
+        
+        Timer.scheduledTimer(withTimeInterval: 0.7, repeats: false) { (timer) in
+            self.insertView.distanceSectionView.backgroundColor = .systemGray6
+        }
     }
 }

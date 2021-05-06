@@ -22,6 +22,8 @@
 		E562050126429F62002A81A3 /* InsertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562050026429F62002A81A3 /* InsertTextField.swift */; };
 		E56205092642BCDB002A81A3 /* InsertSectionViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56205082642BCDB002A81A3 /* InsertSectionViewTextField.swift */; };
 		E5780F432643FA4F00321671 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5780F422643FA4F00321671 /* Extensions.swift */; };
+		E5780F5126440F9000321671 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5780F5026440F9000321671 /* ResultViewController.swift */; };
+		E5780F562644101100321671 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5780F552644101100321671 /* ResultView.swift */; };
 		E5FA0BC62642E08F007DF6A6 /* InsertSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */; };
 		E5FA0BEE2642EC7D007DF6A6 /* InsertSectionViewSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA0BED2642EC7D007DF6A6 /* InsertSectionViewSlider.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		E562050026429F62002A81A3 /* InsertTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextField.swift; sourceTree = "<group>"; };
 		E56205082642BCDB002A81A3 /* InsertSectionViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSectionViewTextField.swift; sourceTree = "<group>"; };
 		E5780F422643FA4F00321671 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E5780F5026440F9000321671 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E5780F552644101100321671 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSlider.swift; sourceTree = "<group>"; };
 		E5FA0BED2642EC7D007DF6A6 /* InsertSectionViewSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSectionViewSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,7 @@
 				E56204FB26429F54002A81A3 /* InsertLabel.swift */,
 				E562050026429F62002A81A3 /* InsertTextField.swift */,
 				E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */,
+				E5780F552644101100321671 /* ResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				E56204A026418071002A81A3 /* InsertViewController.swift */,
+				E5780F5026440F9000321671 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			files = (
 				E5FA0BEE2642EC7D007DF6A6 /* InsertSectionViewSlider.swift in Sources */,
 				E56204A126418071002A81A3 /* InsertViewController.swift in Sources */,
+				E5780F562644101100321671 /* ResultView.swift in Sources */,
 				E56205092642BCDB002A81A3 /* InsertSectionViewTextField.swift in Sources */,
 				E562050126429F62002A81A3 /* InsertTextField.swift in Sources */,
 				E56204FC26429F54002A81A3 /* InsertLabel.swift in Sources */,
@@ -317,6 +324,7 @@
 				E56204EF2641C22A002A81A3 /* CalcManager.swift in Sources */,
 				E5FA0BC62642E08F007DF6A6 /* InsertSlider.swift in Sources */,
 				E5780F432643FA4F00321671 /* Extensions.swift in Sources */,
+				E5780F5126440F9000321671 /* ResultViewController.swift in Sources */,
 				E562049F26418071002A81A3 /* SceneDelegate.swift in Sources */,
 				E56204F42641C340002A81A3 /* Constants.swift in Sources */,
 				E56204E52641C1F8002A81A3 /* InsertView.swift in Sources */,

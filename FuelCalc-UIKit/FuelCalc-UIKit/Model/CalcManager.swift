@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CalcManagerDelegate {
-    func didCalculateSuccessfully()
+    func didCalculateSuccessfully(_ calculatorManager: CalcManager)
     func didFailCalculating()
 }
 
@@ -21,7 +21,7 @@ struct CalcManager {
         if let distance = unwrappedDistance {
             let result = (Float(distance)*(fuelConsumption*fuelPrice)) / 100
             calcModel = CalcModel(distance: distance, fuelConsumption: fuelConsumption, fuelPrice: fuelPrice, result: result)
-            delegate?.didCalculateSuccessfully()
+            delegate?.didCalculateSuccessfully(self)
         } else {
             delegate?.didFailCalculating()
         }
