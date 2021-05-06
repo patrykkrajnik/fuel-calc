@@ -10,6 +10,7 @@ import UIKit
 class InsertViewController: UIViewController {
     
     let insertView = InsertView()
+    var calcManager = CalcManager()
     
     override func loadView() {
         view = insertView
@@ -18,6 +19,7 @@ class InsertViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calcManager.delegate = self
         handleUserActions()
     }
     
@@ -26,17 +28,21 @@ class InsertViewController: UIViewController {
     }
 
     @objc func calculateButtonPressed(_ sender: UIButton) {
-        print("Distance: \(insertView.distanceSectionView.textField.text)")
-        print("Fuel consumption: \(insertView.averageConsumptionSectionView.slider.value)")
-        print("Fuel price: \(insertView.fuelPriceSectionView.slider.value)")
+        let distance = Int(insertView.distanceSectionView.textField.text!)
+        let consumption = insertView.averageConsumptionSectionView.slider.value.roundToOnePlace()
+        let price = insertView.fuelPriceSectionView.slider.value.roundToOnePlace()
+        
+        calcManager.calculateCost(distance, consumption, price)
     }
     
     @objc func consumptionValueChanged(_ sender: UISlider) {
-        insertView.averageConsumptionSectionView.currentValue.text = String(format: "%.1f", sender.value)
+        let consumption = String(format: "%.1f", sender.value)
+        insertView.averageConsumptionSectionView.currentValue.text = consumption
     }
     
     @objc func priceValueChanged(_ sender: UISlider) {
-        insertView.fuelPriceSectionView.currentValue.text = String(format: "%.1f", sender.value)
+        let fuelPrice = String(format: "%.1f", sender.value)
+        insertView.fuelPriceSectionView.currentValue.text = fuelPrice
     }
     
     func handleUserActions() {
@@ -49,3 +55,14 @@ class InsertViewController: UIViewController {
     }
 }
 
+// MARK: - CalcManagerDelegate
+
+extension InsertViewController: CalcManagerDelegate {
+    func didCalculateSuccessfully() {
+        print("Show result")
+    }
+    
+    func didFailCalculating() {
+        print("Insert distance")
+    }
+}

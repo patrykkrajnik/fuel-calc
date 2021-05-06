@@ -19,7 +19,7 @@ class InsertView: UIView {
     
     var averageConsumptionSectionView = InsertSectionViewSlider(
         title: K.InsertViewTitles.averageConsumption,
-        maxValue: 50.0)
+        maxValue: 40.0)
     
     var fuelPriceSectionView = InsertSectionViewSlider(
         title: K.InsertViewTitles.fuelPrice,
