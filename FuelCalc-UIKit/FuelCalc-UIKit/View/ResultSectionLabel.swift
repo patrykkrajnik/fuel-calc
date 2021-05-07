@@ -13,7 +13,10 @@ class ResultSectionLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
+        translatesAutoresizingMaskIntoConstraints = false
+        font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        textAlignment = .center
+        textColor = .label
     }
     
     required init?(coder: NSCoder) {

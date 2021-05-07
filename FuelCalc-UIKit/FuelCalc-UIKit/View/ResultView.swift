@@ -14,6 +14,11 @@ class ResultView: UIView {
     
     var recalculateButton = ActionButton(title: K.recalculateButton)
     
+    var resultSectionView = ResultSectionView(
+        distance: K.ResultViewTitles.distance,
+        fuelConsumption: K.ResultViewTitles.averageConsumption,
+        fuelPrice: K.ResultViewTitles.fuelPrice)
+    
     lazy var resultLabel: UILabel = {
        let label = UILabel()
         
@@ -40,6 +45,7 @@ class ResultView: UIView {
         safeArea = self.layoutMarginsGuide
         
         configureView()
+        configureSection()
     }
     
     func configureView() {
@@ -61,7 +67,12 @@ class ResultView: UIView {
     }
     
     func configureSection() {
+        addSubview(resultSectionView)
         
+        resultSectionView.topAnchor.constraint(equalTo: resultValueLabel.bottomAnchor, constant: 40).isActive = true
+        resultSectionView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor).isActive = true
+        resultSectionView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor).isActive = true
+        resultSectionView.heightAnchor.constraint(equalToConstant: 180).isActive = true
     }
     
     required init?(coder: NSCoder) {

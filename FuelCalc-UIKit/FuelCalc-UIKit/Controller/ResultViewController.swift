@@ -37,8 +37,14 @@ class ResultViewController: UIViewController {
     
     func configureLabels() {
         let resultString = String(format: "%.2f", result!)
+        let distanceString = "\(resultView.resultSectionView.distanceLabel.text!)  -  \(distance!) km"
+        let fuelConsumptionString = "\(resultView.resultSectionView.fuelConsumptionLabel.text!)  -  \(averageFuelConsumption!) l/100km"
+        let fuelPriceString = "\(resultView.resultSectionView.fuelPriceLabel.text!)  -  \(fuelPrice!)"
         
         resultView.resultValueLabel.text = resultString
+        resultView.resultSectionView.distanceLabel.text = distanceString
+        resultView.resultSectionView.fuelConsumptionLabel.text = fuelConsumptionString
+        resultView.resultSectionView.fuelPriceLabel.text = fuelPriceString
     }
 
 }
