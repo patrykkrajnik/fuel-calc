@@ -23,6 +23,22 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        handleUserActions()
+        configureLabels()
+    }
+    
+    @objc func recalculateButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func handleUserActions() {
+        resultView.recalculateButton.addTarget(self, action: #selector(recalculateButtonPressed(_:)), for: .touchUpInside)
+    }
+    
+    func configureLabels() {
+        let resultString = String(format: "%.2f", result!)
+        
+        resultView.resultValueLabel.text = resultString
     }
 
 }

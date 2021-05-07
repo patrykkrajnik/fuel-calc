@@ -25,6 +25,8 @@
 		E5780F5126440F9000321671 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5780F5026440F9000321671 /* ResultViewController.swift */; };
 		E5780F562644101100321671 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5780F552644101100321671 /* ResultView.swift */; };
 		E5DBE77626459DC9000656EE /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBE77526459DC9000656EE /* ActionButton.swift */; };
+		E5DBE78126459F50000656EE /* ResultSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBE78026459F50000656EE /* ResultSectionView.swift */; };
+		E5DBE78626459F65000656EE /* ResultSectionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DBE78526459F65000656EE /* ResultSectionLabel.swift */; };
 		E5FA0BC62642E08F007DF6A6 /* InsertSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */; };
 		E5FA0BEE2642EC7D007DF6A6 /* InsertSectionViewSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FA0BED2642EC7D007DF6A6 /* InsertSectionViewSlider.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		E5780F5026440F9000321671 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E5780F552644101100321671 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		E5DBE77526459DC9000656EE /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E5DBE78026459F50000656EE /* ResultSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionView.swift; sourceTree = "<group>"; };
+		E5DBE78526459F65000656EE /* ResultSectionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSectionLabel.swift; sourceTree = "<group>"; };
 		E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSlider.swift; sourceTree = "<group>"; };
 		E5FA0BED2642EC7D007DF6A6 /* InsertSectionViewSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSectionViewSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,8 +177,10 @@
 				E56204FB26429F54002A81A3 /* InsertLabel.swift */,
 				E562050026429F62002A81A3 /* InsertTextField.swift */,
 				E5FA0BC52642E08F007DF6A6 /* InsertSlider.swift */,
-				E5780F552644101100321671 /* ResultView.swift */,
 				E5DBE77526459DC9000656EE /* ActionButton.swift */,
+				E5780F552644101100321671 /* ResultView.swift */,
+				E5DBE78026459F50000656EE /* ResultSectionView.swift */,
+				E5DBE78526459F65000656EE /* ResultSectionLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,8 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DBE78126459F50000656EE /* ResultSectionView.swift in Sources */,
 				E5FA0BEE2642EC7D007DF6A6 /* InsertSectionViewSlider.swift in Sources */,
 				E56204A126418071002A81A3 /* InsertViewController.swift in Sources */,
+				E5DBE78626459F65000656EE /* ResultSectionLabel.swift in Sources */,
 				E5780F562644101100321671 /* ResultView.swift in Sources */,
 				E56205092642BCDB002A81A3 /* InsertSectionViewTextField.swift in Sources */,
 				E562050126429F62002A81A3 /* InsertTextField.swift in Sources */,
