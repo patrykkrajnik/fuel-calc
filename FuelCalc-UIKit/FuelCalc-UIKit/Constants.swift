@@ -20,12 +20,14 @@ struct K {
     
     struct InsertViewPlaceholders {
         static let distance = "eg. 250"
+        static let defaultSliderValue = "0.0"
     }
     
     struct ResultViewTitles {
-        static let distance = "Distance:"
-        static let averageConsumption = "Average Consumption:"
-        static let fuelPrice = "Price of 1 liter of fuel:"
+        static let distance = "Distance"
+        static let averageConsumption = "Average Consumption"
+        static let fuelPrice = "Price of 1 liter of fuel"
         static let result = "Total cost of ride:"
+        static let summary = "Summary"
     }
 }

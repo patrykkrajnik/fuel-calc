@@ -36,12 +36,12 @@ class InsertViewController: UIViewController {
     }
     
     @objc func consumptionValueChanged(_ sender: UISlider) {
-        let consumption = String(format: "%.1f", sender.value)
+        let consumption = String(sender.value.roundToOnePlace())
         insertView.averageConsumptionSectionView.currentValue.text = consumption
     }
     
     @objc func priceValueChanged(_ sender: UISlider) {
-        let fuelPrice = String(format: "%.1f", sender.value)
+        let fuelPrice = String(sender.value.roundToOnePlace())
         insertView.fuelPriceSectionView.currentValue.text = fuelPrice
     }
     

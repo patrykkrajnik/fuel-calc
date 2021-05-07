@@ -16,7 +16,7 @@ class InsertSectionViewSlider: UIView {
     var currentValue: UILabel = {
         let value = UILabel()
         
-        value.text = "0.0"
+        value.text = K.InsertViewPlaceholders.defaultSliderValue
         value.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         value.textColor = .label
         
