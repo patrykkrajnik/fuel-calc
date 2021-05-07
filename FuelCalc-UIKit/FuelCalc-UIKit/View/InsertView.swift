@@ -25,6 +25,8 @@ class InsertView: UIView {
         title: K.InsertViewTitles.fuelPrice,
         maxValue: 10.0)
     
+    var calculateButton = ActionButton(title: K.calculateButton)
+    
     lazy var headerLabel: UILabel = {
        let label = UILabel()
         
@@ -34,19 +36,6 @@ class InsertView: UIView {
         label.textColor = .label
         
         return label
-    }()
-    
-    lazy var calculateButton: UIButton = {
-       let button = UIButton()
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(K.calculateButton, for: .normal)
-        button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .systemGray4
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .regular)
-        button.layer.cornerRadius = 25.0
-        
-        return button
     }()
     
     override init(frame: CGRect) {
