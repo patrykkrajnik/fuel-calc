@@ -9,7 +9,12 @@ import SwiftUI
 
 struct InsertView: View {
     
-    @State private var showResults = false
+    @State private var distance: String = ""
+    @State private var fuelConsumption: Float = 0.0
+    @State private var fuelPrice: Float = 0.0
+    
+    @State private var isPresentingResult = false
+    @State private var isDistanceEntered = true
     
     var body: some View {
         ZStack {
@@ -17,21 +22,32 @@ struct InsertView: View {
             VStack {
                 Text(K.appName)
                     .font(.largeTitle)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                     .position(x: 80.0, y: 20.0)
                     .padding()
                     .frame(height: 60)
                 InsertSectionTextField(
+                    distance: $distance,
+                    isDistanceEntered: $isDistanceEntered,
                     title: K.InsertViewTitles.distance)
                 InsertSectionSlider(
+                    currentValue: $fuelConsumption,
                     title: K.InsertViewTitles.averageConsumption,
                     maximumValue: 40.0)
                 InsertSectionSlider(
+                    currentValue: $fuelPrice,
                     title: K.InsertViewTitles.fuelPrice,
                     maximumValue: 10.0)
                 Spacer()
-                Button(action: {
-                    self.showResults = true
+                Button(action: { [self] in
+                    if distance == "" {
+                        isDistanceEntered = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                            isDistanceEntered = true
+                        }
+                        return
+                    }
+                    isPresentingResult = true
                 }) {
                     ZStack {
                         Color(.systemGray4)
@@ -41,11 +57,15 @@ struct InsertView: View {
                         Text(K.calculateButton)
                             .font(.system(size: 24))
                             .fontWeight(.regular)
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color(UIColor.label))
                     }
                 }
-                .popover(isPresented: $showResults) {
-                    ResultView()
+                .popover(isPresented: $isPresentingResult) { [self] in
+                    ResultView(
+                        isResultPresented: $isPresentingResult,
+                        distance: $distance,
+                        fuelConsumption: $fuelConsumption,
+                        fuelPrice: $fuelPrice)
                 }
                 .padding(.horizontal, 45)
                 .padding(.bottom, 10)
@@ -56,14 +76,15 @@ struct InsertView: View {
 
 struct InsertSectionTextField: View {
     
-    @State private var username: String = ""
+    @Binding var distance: String
+    @Binding var isDistanceEntered: Bool
     @State private var isEditing = false
     
     var title: String
     
     var body: some View {
         ZStack {
-            Color(.systemGray6)
+            Color(isDistanceEntered ? .systemGray6 : .systemRed)
                 .cornerRadius(25.0)
             VStack(alignment: .leading) {
                 Text(title)
@@ -72,7 +93,7 @@ struct InsertSectionTextField: View {
                     .padding(.horizontal, 15)
                 TextField(
                     "",
-                    text: $username
+                    text: $distance
                 ) { isEditing in
                     self.isEditing = isEditing
                 }
@@ -90,7 +111,7 @@ struct InsertSectionTextField: View {
 
 struct InsertSectionSlider: View {
     
-    @State private var currentValue: Float = 0.0
+    @Binding var currentValue: Float
     @State private var isEditing = false
     
     var title: String
@@ -105,7 +126,7 @@ struct InsertSectionSlider: View {
                     .fontWeight(.regular)
                     .font(.system(size: 20))
                     .padding(.horizontal, 15)
-                Text("\(currentValue.roundToOnePlace(), specifier: "%.1f")")
+                Text("\(currentValue, specifier: "%.1f")")
                     .fontWeight(.semibold)
                     .font(.system(size: 22))
                     .frame(
