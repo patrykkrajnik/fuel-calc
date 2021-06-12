@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50FDC8F2674CF3000E85B87 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FDC8E2674CF3000E85B87 /* ResultView.swift */; };
+		E50FDC912674E05F00E85B87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50FDC902674E05F00E85B87 /* Extensions.swift */; };
 		E5D9A4F52670ED0C00F326F4 /* FuelCalc_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D9A4F42670ED0C00F326F4 /* FuelCalc_SwiftUIApp.swift */; };
 		E5D9A4F72670ED0C00F326F4 /* InsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D9A4F62670ED0C00F326F4 /* InsertView.swift */; };
 		E5D9A4F92670ED0D00F326F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D9A4F82670ED0D00F326F4 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E50FDC8E2674CF3000E85B87 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		E50FDC902674E05F00E85B87 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E5D9A4F12670ED0C00F326F4 /* FuelCalc-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FuelCalc-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D9A4F42670ED0C00F326F4 /* FuelCalc_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelCalc_SwiftUIApp.swift; sourceTree = "<group>"; };
 		E5D9A4F62670ED0C00F326F4 /* InsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertView.swift; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 			children = (
 				E5D9A4F42670ED0C00F326F4 /* FuelCalc_SwiftUIApp.swift */,
 				E5D9A4F62670ED0C00F326F4 /* InsertView.swift */,
+				E50FDC8E2674CF3000E85B87 /* ResultView.swift */,
 				E5D9A5032670FB8100F326F4 /* Constants.swift */,
+				E50FDC902674E05F00E85B87 /* Extensions.swift */,
 				E5D9A4F82670ED0D00F326F4 /* Assets.xcassets */,
 				E5D9A4FD2670ED0D00F326F4 /* Info.plist */,
 				E5D9A4FA2670ED0D00F326F4 /* Preview Content */,
@@ -141,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50FDC912674E05F00E85B87 /* Extensions.swift in Sources */,
 				E5D9A4F72670ED0C00F326F4 /* InsertView.swift in Sources */,
+				E50FDC8F2674CF3000E85B87 /* ResultView.swift in Sources */,
 				E5D9A4F52670ED0C00F326F4 /* FuelCalc_SwiftUIApp.swift in Sources */,
 				E5D9A5042670FB8100F326F4 /* Constants.swift in Sources */,
 			);
