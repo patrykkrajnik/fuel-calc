@@ -17,14 +17,9 @@ struct ResultView: View {
     
     var body: some View {
         VStack {
-            Text("Result")
-                .padding()
-            Text("\(distance)")
-                .padding()
-            Text("\(fuelConsumption)")
-                .padding()
-            Text("\(fuelPrice)")
-                .padding()
+            ResultSection(distance: distance,
+                        fuelConsumption: fuelConsumption,
+                        fuelPrice: fuelPrice)
             Spacer()
             Button(action: {
                 self.isResultPresented = false
