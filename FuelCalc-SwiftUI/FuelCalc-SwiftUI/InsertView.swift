@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  InsertView.swift
 //  FuelCalc-SwiftUI
 //
 //  Created by Patryk Krajnik on 09/06/2021.

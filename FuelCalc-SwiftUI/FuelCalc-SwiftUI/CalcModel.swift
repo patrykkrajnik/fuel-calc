@@ -1,5 +1,5 @@
 //
-//  TripCost.swift
+//  CalcModel.swift
 //  FuelCalc-SwiftUI
 //
 //  Created by Patryk Krajnik on 12/06/2021.
