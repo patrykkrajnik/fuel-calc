@@ -25,11 +25,23 @@ struct ResultView: View {
                 .padding()
             Text("\(fuelPrice)")
                 .padding()
+            Spacer()
             Button(action: {
                 self.isResultPresented = false
-            }, label: {
-                Text("Cancel")
-            })
+            }) {
+                ZStack {
+                    Color(.systemGray4)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .frame(height: 60)
+                        .cornerRadius(25)
+                    Text(K.recalculateButton)
+                        .font(.system(size: 24))
+                        .fontWeight(.regular)
+                        .foregroundColor(Color(UIColor.label))
+                }
+            }
+            .padding(.horizontal, 45)
+            .padding(.vertical, 10)
         }
     }
 }
