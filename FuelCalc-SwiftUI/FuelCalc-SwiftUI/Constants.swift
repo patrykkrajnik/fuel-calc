@@ -17,4 +17,14 @@ struct K {
         static let averageConsumption = "Average Consumption (l/100km)"
         static let fuelPrice = "Price of 1 liter of fuel"
     }
+    
+    struct ResultViewTitles {
+        static let distance = "Distance"
+        static let averageConsumption = "Average Consumption"
+        static let fuelPrice = "Price of 1 liter of fuel"
+        static let result = "Total cost of ride:"
+        static let summary = "Summary"
+        static let distanceUnit = "km"
+        static let consumptionUnit = "l/100km"
+    }
 }
