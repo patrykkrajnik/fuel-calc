@@ -39,5 +39,8 @@ struct InsertSectionTextField: View {
         .frame(height: 140)
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
+        .onAppear(perform: {
+            UIApplication.shared.addTapGestureRecognizer()
+        })
     }
 }
