@@ -25,7 +25,7 @@ struct InsertSectionTextField: View {
                     .font(.system(size: 20))
                     .padding(.horizontal, 15)
                 TextField(
-                    "",
+                    K.InsertViewPlaceholder.distance,
                     text: $distance
                 ) { isEditing in
                     self.isEditing = isEditing

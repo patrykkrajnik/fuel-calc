@@ -18,6 +18,10 @@ struct K {
         static let fuelPrice = "Price of 1 liter of fuel"
     }
     
+    struct InsertViewPlaceholder {
+        static let distance = "eg. 250"
+    }
+    
     struct ResultViewTitles {
         static let distance = "Distance"
         static let averageConsumption = "Average Consumption"
