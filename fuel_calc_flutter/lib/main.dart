@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/insert_page.dart';
 
 void main() => runApp(FuelCalc());
 
@@ -6,6 +7,7 @@ class FuelCalc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: InsertPage(),
       theme: ThemeData(
         brightness: Brightness.light,
       ),
