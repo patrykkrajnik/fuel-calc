@@ -7,6 +7,7 @@ class FuelCalc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: InsertPage(),
       theme: ThemeData(
         brightness: Brightness.light,
