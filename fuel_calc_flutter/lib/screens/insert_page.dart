@@ -1,6 +1,7 @@
 import 'dart:async';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'result_page.dart';
 
 class InsertPage extends StatefulWidget {
   @override
@@ -221,7 +222,17 @@ class _InsertPageState extends State<InsertPage> {
                         });
                       });
                     } else {
-                      print('$distance, $fuelConsumption, $fuelPrice');
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              fullscreenDialog: true,
+                              builder: (context) => ResultPage(
+                                distance: distance,
+                                fuelConsumption: fuelConsumption,
+                                fuelPrice: fuelPrice,
+                              )
+                          )
+                      );
                     }
                   },
                   child: Container(
