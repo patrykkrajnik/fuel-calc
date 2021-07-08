@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'result_page.dart';
+import 'package:fuel_calc_flutter/calculator_manager.dart';
 
 class InsertPage extends StatefulWidget {
   @override
@@ -222,14 +223,21 @@ class _InsertPageState extends State<InsertPage> {
                         });
                       });
                     } else {
+
+                      CalculatorManager calc = CalculatorManager(
+                          distance: distance,
+                          fuelConsumption: fuelConsumption,
+                          fuelPrice: fuelPrice);
+
                       Navigator.push(
                           context,
                           CupertinoPageRoute(
                               fullscreenDialog: true,
                               builder: (context) => ResultPage(
-                                distance: distance,
-                                fuelConsumption: fuelConsumption,
-                                fuelPrice: fuelPrice,
+                                distance: calc.getDistance(),
+                                fuelConsumption: calc.getFuelConsumption(),
+                                fuelPrice: calc.getFuelPrice(),
+                                result: calc.getResult(),
                               )
                           )
                       );

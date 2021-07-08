@@ -5,12 +5,14 @@ class ResultPage extends StatelessWidget {
   ResultPage({
     required this.distance,
     required this.fuelConsumption,
-    required this.fuelPrice
+    required this.fuelPrice,
+    required this.result
 });
 
-  final int distance;
-  final double fuelConsumption;
-  final double fuelPrice;
+  final String distance;
+  final String fuelConsumption;
+  final String fuelPrice;
+  final String result;
 
   final textFieldSectionColor = Colors.grey.shade200;
 
@@ -36,7 +38,7 @@ class ResultPage extends StatelessWidget {
                     height: 10.0,
                   ),
                   Text(
-                    '10.0',
+                    result,
                     style: TextStyle(
                         fontSize: 36.0,
                         fontWeight: FontWeight.w400
