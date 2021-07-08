@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'result_page.dart';
 import 'package:fuel_calc_flutter/calculator_manager.dart';
+import 'package:fuel_calc_flutter/constants.dart';
 
 class InsertPage extends StatefulWidget {
   @override
@@ -34,16 +35,13 @@ class _InsertPageState extends State<InsertPage> {
                 Container(
                   padding: EdgeInsets.only(left: 20.0, top: 20.0, bottom: 10.0),
                   child: Text(
-                    'FuelCalc',
-                    style: TextStyle(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.bold,
-                    ),
+                    ConstantStrings.appName,
+                    style: ConstantTextStyles.pageTitleStyle,
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  height: 150.0,
+                  height: ConstantProperties.textFieldSectionHeight,
                   decoration: BoxDecoration(
                       color: textFieldSectionColor,
                       borderRadius: BorderRadius.circular(20.0)
@@ -55,12 +53,8 @@ class _InsertPageState extends State<InsertPage> {
                       Padding(
                         padding: EdgeInsets.only(left: 10.0),
                         child: Text(
-                          'Distance (km)',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          ConstantStrings.distance,
+                          style: ConstantTextStyles.sectionTitleStyle,
                         ),
                       ),
                       Padding(
@@ -68,7 +62,7 @@ class _InsertPageState extends State<InsertPage> {
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            hintText: 'eg. 250',
+                            hintText: ConstantStrings.distancePlaceholder,
                             fillColor: Colors.white,
                             filled: true,
                             hintStyle: TextStyle(
@@ -87,9 +81,9 @@ class _InsertPageState extends State<InsertPage> {
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  height: 160.0,
+                  height: ConstantProperties.sliderSectionHeight,
                   decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
+                      color: ConstantColors.sectionBackgroundColor,
                       borderRadius: BorderRadius.circular(20.0)
                   ),
                   child: Column(
@@ -99,12 +93,8 @@ class _InsertPageState extends State<InsertPage> {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                         child: Text(
-                          'Average Consumption (l/100km)',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          ConstantStrings.averageConsumption,
+                          style: ConstantTextStyles.sectionTitleStyle,
                         ),
                       ),
                       Padding(
@@ -112,11 +102,7 @@ class _InsertPageState extends State<InsertPage> {
                         child: Center(
                           child: Text(
                             fuelConsumption.toStringAsFixed(1),
-                            style: TextStyle(
-                              color: Colors.black,
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.bold
-                            ),
+                            style: ConstantTextStyles.sliderSectionValueStyle,
                           ),
                         ),
                       ),
@@ -144,9 +130,9 @@ class _InsertPageState extends State<InsertPage> {
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                  height: 160.0,
+                  height: ConstantProperties.sliderSectionHeight,
                   decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
+                      color: ConstantColors.sectionBackgroundColor,
                       borderRadius: BorderRadius.circular(20.0)
                   ),
                   child: Column(
@@ -156,12 +142,8 @@ class _InsertPageState extends State<InsertPage> {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                         child: Text(
-                          'Price of 1 liter of fuel',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w400,
-                          ),
+                          ConstantStrings.fuelPrice,
+                          style: ConstantTextStyles.sectionTitleStyle,
                         ),
                       ),
                       Padding(
@@ -169,11 +151,7 @@ class _InsertPageState extends State<InsertPage> {
                         child: Center(
                           child: Text(
                             fuelPrice.toStringAsFixed(1),
-                            style: TextStyle(
-                              color: Colors.black,
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.bold
-                            ),
+                            style: ConstantTextStyles.sliderSectionValueStyle,
                           ),
                         ),
                       ),
@@ -247,17 +225,13 @@ class _InsertPageState extends State<InsertPage> {
                     margin: EdgeInsets.symmetric(horizontal: 50.0),
                     padding: EdgeInsets.all(20.0),
                     decoration: BoxDecoration(
-                      color: Colors.grey.shade400,
+                      color: ConstantColors.buttonBackgroundColor,
                       borderRadius: BorderRadius.circular(20.0)
                     ),
                     child: Center(
                       child: Text(
-                        'Calculate',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 24.0,
-                          color: Colors.black
-                        ),
+                        ConstantStrings.calculateButton,
+                        style: ConstantTextStyles.buttonTitleStyle,
                       ),
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fuel_calc_flutter/constants.dart';
 
 class ResultPage extends StatelessWidget {
 
@@ -14,8 +15,6 @@ class ResultPage extends StatelessWidget {
   final String fuelPrice;
   final String result;
 
-  final textFieldSectionColor = Colors.grey.shade200;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,21 +27,15 @@ class ResultPage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Text(
-                    'Total cost of ride:',
-                    style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold
-                    ),
+                    ConstantStrings.result,
+                    style: ConstantTextStyles.pageTitleStyle,
                   ),
                   SizedBox(
                     height: 10.0,
                   ),
                   Text(
                     result,
-                    style: TextStyle(
-                        fontSize: 36.0,
-                        fontWeight: FontWeight.w400
-                    ),
+                    style: ConstantTextStyles.resultValueStyle,
                   ),
                 ],
               ),
@@ -51,48 +44,35 @@ class ResultPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               padding: EdgeInsets.only(top: 15.0, bottom: 30.0),
               decoration: BoxDecoration(
-                  color: textFieldSectionColor,
+                  color: ConstantColors.sectionBackgroundColor,
                   borderRadius: BorderRadius.circular(20.0)
               ),
               child: Column(
                 children: <Widget>[
                   Text(
-                    'Summary',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    ConstantStrings.summary,
+                    style: ConstantTextStyles.summaryTitleStyle,
                   ),
                   SizedBox(
                     height: 20.0,
                   ),
                   Text(
                     'Distance - $distance km',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                    ),
+                    style: ConstantTextStyles.summaryResultStyle,
                   ),
                   SizedBox(
                     height: 15.0,
                   ),
                   Text(
                     'Average Consumption - $fuelConsumption l/100km',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                    ),
+                    style: ConstantTextStyles.summaryResultStyle,
                   ),
                   SizedBox(
                     height: 15.0,
                   ),
                   Text(
                     'Price of 1 liter of fuel - $fuelPrice',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                    ),
+                    style: ConstantTextStyles.summaryResultStyle,
                   )
                 ],
               ),
@@ -108,17 +88,13 @@ class ResultPage extends StatelessWidget {
                   margin: EdgeInsets.symmetric(horizontal: 50.0),
                   padding: EdgeInsets.all(20.0),
                   decoration: BoxDecoration(
-                      color: Colors.grey.shade400,
+                      color: ConstantColors.buttonBackgroundColor,
                       borderRadius: BorderRadius.circular(20.0)
                   ),
                   child: Center(
                     child: Text(
-                      'Recalculate',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 24.0,
-                          color: Colors.black
-                      ),
+                      ConstantStrings.recalculateButton,
+                      style: ConstantTextStyles.buttonTitleStyle,
                     ),
                   ),
                 )
