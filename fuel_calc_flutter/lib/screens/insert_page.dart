@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'result_page.dart';
 import 'package:fuel_calc_flutter/calculator_manager.dart';
 import 'package:fuel_calc_flutter/constants.dart';
+import 'package:fuel_calc_flutter/components/action_button.dart';
 
 class InsertPage extends StatefulWidget {
   @override
@@ -180,61 +181,45 @@ class _InsertPageState extends State<InsertPage> {
                 Expanded(
                   child: SizedBox(),
                 ),
-                TextButton(
-                  style: ButtonStyle(
-                    overlayColor: MaterialStateColor.resolveWith((states) => Colors.transparent)
-                  ),
-                  onPressed: () {
-                    if (myController.text != '') {
-                      distance = int.parse(myController.text);
-                    } else {
-                      distance = 0;
-                    }
+                ActionButton(
+                    onTap: () {
+                      if (myController.text != '') {
+                        distance = int.parse(myController.text);
+                      } else {
+                        distance = 0;
+                      }
 
-                    if (distance == 0) {
-                      setState(() {
-                        textFieldSectionColor = Colors.red.shade600;
-                        Timer(Duration(milliseconds: 800), () {
-                          setState(() {
-                            textFieldSectionColor = Colors.grey.shade200;
+                      if (distance == 0) {
+                        setState(() {
+                          textFieldSectionColor = Colors.red.shade600;
+                          Timer(Duration(milliseconds: 800), () {
+                            setState(() {
+                              textFieldSectionColor = Colors.grey.shade200;
+                            });
                           });
                         });
-                      });
-                    } else {
+                      } else {
 
-                      CalculatorManager calc = CalculatorManager(
-                          distance: distance,
-                          fuelConsumption: fuelConsumption,
-                          fuelPrice: fuelPrice);
+                        CalculatorManager calc = CalculatorManager(
+                            distance: distance,
+                            fuelConsumption: fuelConsumption,
+                            fuelPrice: fuelPrice);
 
-                      Navigator.push(
-                          context,
-                          CupertinoPageRoute(
-                              fullscreenDialog: true,
-                              builder: (context) => ResultPage(
-                                distance: calc.getDistance(),
-                                fuelConsumption: calc.getFuelConsumption(),
-                                fuelPrice: calc.getFuelPrice(),
-                                result: calc.getResult(),
-                              )
-                          )
-                      );
-                    }
-                  },
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 50.0),
-                    padding: EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
-                      color: ConstantColors.buttonBackgroundColor,
-                      borderRadius: BorderRadius.circular(20.0)
-                    ),
-                    child: Center(
-                      child: Text(
-                        ConstantStrings.calculateButton,
-                        style: ConstantTextStyles.buttonTitleStyle,
-                      ),
-                    ),
-                  ),
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                fullscreenDialog: true,
+                                builder: (context) => ResultPage(
+                                  distance: calc.getDistance(),
+                                  fuelConsumption: calc.getFuelConsumption(),
+                                  fuelPrice: calc.getFuelPrice(),
+                                  result: calc.getResult(),
+                                )
+                            )
+                        );
+                      }
+                    },
+                    buttonTitle: ConstantStrings.calculateButton
                 )
               ],
             ),

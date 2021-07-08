@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fuel_calc_flutter/components/action_button.dart';
 import 'package:fuel_calc_flutter/constants.dart';
 
 class ResultPage extends StatelessWidget {
@@ -80,24 +81,11 @@ class ResultPage extends StatelessWidget {
             Expanded(
                 child: SizedBox()
             ),
-            TextButton(
-                onPressed: () {
+            ActionButton(
+                onTap: () {
                   Navigator.pop(context);
-                },
-                child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 50.0),
-                  padding: EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
-                      color: ConstantColors.buttonBackgroundColor,
-                      borderRadius: BorderRadius.circular(20.0)
-                  ),
-                  child: Center(
-                    child: Text(
-                      ConstantStrings.recalculateButton,
-                      style: ConstantTextStyles.buttonTitleStyle,
-                    ),
-                  ),
-                )
+                  },
+                buttonTitle: ConstantStrings.recalculateButton
             )
           ],
         ),
