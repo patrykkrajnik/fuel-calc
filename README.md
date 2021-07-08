@@ -15,13 +15,13 @@ Calcaulator of travel costs that allows you to calculate how much money you will
 ### SwiftUI
 <div align="center">
 	<img src="images/screenshotInsertSwiftUI.png" alt="InsertSwiftUI" width="35%">
-	<img src="images/screenshotInsertSwiftUI.png" alt="ResultSwiftUI" width="35%">
+	<img src="images/screenshotResultSwiftUI.png" alt="ResultSwiftUI" width="35%">
 </div>
 
 ### Flutter
 <div align="center">
 	<img src="images/screenshotInsertFlutter.png" alt="InsertFlutter" width="35%">
-	<img src="images/screenshotInsertFlutter.png" alt="ResultFlutter" width="35%">
+	<img src="images/screenshotResultFlutter.png" alt="ResultFlutter" width="35%">
 </div>
 
 ## Features
