@@ -3,7 +3,7 @@
 </div>
 
 # MusicAll [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-Calcaulator of travel costs that allows you to calculate how much money you will spend on fuel. This repository contains three versions of exactly the same working versions of application. The difference between them is technology that they were made - there is application made with UIKit, SwiftUI and cross-platform framework Flutter.
+Calculator of travel costs that allows you to calculate how much money you will spend on fuel. This repository contains three versions of exactly the same working versions of application. The difference between them is technology that they were made - there is application made with UIKit, SwiftUI and cross-platform framework Flutter.
 
 ## Screenshots
 ### UIKit
@@ -34,7 +34,7 @@ Calcaulator of travel costs that allows you to calculate how much money you will
 - [`fuel_calc_flutter`](fuel_calc_flutter) - project of application written by using Flutter
 
 ## Usage
-Clone this repository, depending on which version do you want to launch. 
+Clone this repository, depending on which version do you want to launch. <br />
 For UIKit or SwiftUI, open the project at Xcode. For Flutter version, you have to open the project by using Android Studio. 
 
 ## Author
